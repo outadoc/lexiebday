@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sssssssssshhh...</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- i'm in ur html -->
+		<!-- stealin ur sockz -->
+	</head>
+	<body>
+		<section id="one" data-type="background" data-speed="10">
+			<div class="big-block">
+				<div class="inner-block">
+					<h1>Oh, it's you.</h1>
+					<audio id="audio-player" controls>
+						<source src="assets/exile_vilify.mp3" type="audio/mpeg">
+						Utilise plutôt la dernière version de Chrome :3
+					</audio>
+				</div>
+			</div>
+		</section>   
+		<section id="two" data-type="background" data-speed="5">
+			<div class="big-block">
+				<div class="inner-block">
+					<h1>Alors, comme ça, c'est ton anniversaire ? :3</h1>
+					<h2>Je pense qu'un cadeau s'impose, dans ce cas.</h2>
+				</div>
+			</div>
+		</section>
+		<section id="three" data-type="background" data-speed="20">
+			<div class="big-block">
+				<div class="inner-block">
+					<h1>Je t'en ai préparé un petit, j'espère qu'il te plaira.</h1>
+					<h2>(de toute façon t'as pas le choix, grr)</h2>
+				</div>
+			</div>
+		</section>
+		<section id="four" data-type="background" data-speed="15">
+			<div class="filter">
+				<div class="big-block">
+					<div class="inner-block">
+						<video id="video-player" width="854" height="480" poster="assets/video_loading.png" controls>
+							<source src="assets/placeholder.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				var audioPlayer = document.getElementById('audio-player'),
+					videoPlayer = document.getElementById('video-player');
+				
+				//audioPlayer.play();
+
+				videoPlayer.addEventListener('play', function() {
+					$('#four .filter').css('background-color', 'rgba(0,0,0,0.4)')
+			    	audioPlayer.pause();
+			    });
+
+			    videoPlayer.addEventListener('click', function() {
+			    	videoPlayer.play();
+			    });
+			    
+			    $('section[data-type="background"]').each(function() {
+			        var background = $(this);
+			     
+			        $(window).scroll(function() {
+			            var yPos = -($(window).scrollTop() / background.data('speed')); 
+			            var coords = '50% '+ yPos + 'px';
+			 			background.css({
+			 				backgroundPosition: coords
+			 			});
+			        });
+			    });
+			});
+
+		</script>
+	</body>
+</html>

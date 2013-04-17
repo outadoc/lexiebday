@@ -1,0 +1,70 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue";
+	text-shadow: 0 0 5px #343434;
+}
+
+section {
+	background-color: black;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 0px;
+	
+	-webkit-box-shadow: 0 0 80px rgba(0,0,0,0.8);
+  			box-shadow: 0 0 80px rgba(0,0,0,0.8);
+}
+
+#one {
+	background-image: url("assets/portal_bots.jpg");
+}
+
+#two {
+	background-image: url("assets/paramore.jpg");
+}
+
+#three {
+	background-image: url("assets/doctor_who.jpg");
+}
+
+#four {
+	background-image: url("assets/minecon_photo_arrival.jpg");
+}
+
+.big-block h1 {
+	font-weight: 100;
+	font-size: 50px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.big-block h2 {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.big-block {
+	margin: auto;
+	width: auto;
+	text-align: center;
+	display: table;
+
+	height: 900px;
+	color: white;
+}
+
+.inner-block {
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#one h1 {
+	font-size: 70px;
+}
+
+.filter {
+	-webkit-transition: background-color 1s;
+			transition: background-color 1s;
+}
