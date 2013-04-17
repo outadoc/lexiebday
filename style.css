@@ -1,6 +1,8 @@
 body {
 	padding: 0;
 	margin: 0;
+
+	color: white;
 	font-family: "Helvetica Neue";
 	text-shadow: 0 0 5px #343434;
 }
@@ -12,8 +14,7 @@ section {
 	background-attachment: fixed;
 	background-position: 50% 0px;
 	
-	-webkit-box-shadow: 0 0 80px rgba(0,0,0,0.8);
-  			box-shadow: 0 0 80px rgba(0,0,0,0.8);
+  	box-shadow: 0 0 80px rgba(0,0,0,0.8);
 }
 
 #one {
@@ -35,8 +36,7 @@ section {
 .big-block h1 {
 	font-weight: 100;
 	font-size: 50px;
-	margin-top: 0;
-	margin-bottom: 20px;
+	margin: 0 auto 20px auto;
 }
 
 .big-block h2 {
@@ -51,7 +51,6 @@ section {
 	display: table;
 
 	height: 900px;
-	color: white;
 }
 
 .inner-block {
